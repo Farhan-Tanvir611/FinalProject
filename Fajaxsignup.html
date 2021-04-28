@@ -1,0 +1,131 @@
+<html><head>
+<title>REGISTRATION FORM OF MANAGER</title>
+</head>
+<body background="4717561.jpg">
+<font color="Black"> <h1> <marquee> WELCOME TO SIGN UP PAGE OF MANAGER
+</marquee> </h1> </font>
+<hr>
+<br>
+<font size="4" color="White">
+
+<b>
+<center>
+
+<label for="user"> User Id:</label>
+<input type="text" name="user" id="user" color="Rainbow">
+<br><br>
+
+<label for="myname">Enter your name:</label>
+<input type="text" name="myname" id="myname" color="Rainbow">
+<br><br>
+
+<!--date-->
+<label for="dob">Date of Birth: </label>
+
+<input type="date" id="dob" name="dateOfBirth" value="2021-02-15" min="1980-01-01" max="2025-12-31">
+
+<br><br>
+<!-- Input Text Field -->
+<label for="fathername">Father's Name:</label>
+<input type="text" name="fathername" id="fathername" >
+
+<br><br>
+
+<!-- Input Text Field -->
+<label for="mothername">Mother's Name:</label>
+<input type="text" name="mothername" id="mothername" >
+<br>
+<br>
+<label for="paddress">Present Address: </label>
+<input type="text" name="paddress" id="paddress" >
+
+<br><br>
+<label for="permaddress">Permanent Address: </label>
+<input type="text" name="permaddress" id="permaddress" >
+
+<br><br>
+<!--Phone/tel -->
+<label for="phone">Phone number: </label>
+<input type="tel" id="phone" name="phone" >
+<br><br>
+<!--Email/email-->
+<label for="email">Email Address: </label>
+<input type="email" id="email" name="email" >
+
+<label for="pass">Password</label>
+<input type="password" id="pass" name="pass"  >
+<br>
+<br><br>
+
+<label for="Confirmpass">Confirm Password:</label>
+<input type="password" id="Confirmpass" name="Confirmpass" >
+
+<br><br>
+</font>
+<button id ="submit" onclick="submit()">SUBMIT</button>
+
+<p id = "p1"></p>
+<br>
+
+</center>
+</b>
+
+
+
+
+<script>
+    function submit() {
+           var user= document.getElementById("user").value;
+
+        var myname= document.getElementById("myname").value;
+           
+                  var dateOfBirth= document.getElementById("dob").value;
+                       var fathername= document.getElementById("fathername").value;
+                            var mothername= document.getElementById("mothername").value;
+                                 var paddress= document.getElementById("paddress").value;
+                                      var permaddress= document.getElementById("permaddress").value;
+                                           var phone= document.getElementById("phone").value;
+                                                var email= document.getElementById("email").value;
+                                                     var pass= document.getElementById("pass").value;
+                                                          var Confirmpass= document.getElementById("Confirmpass").value;
+
+if (user == "" || myname==""||dateOfBirth == ""||fathername == "" || mothername==""||paddress == "" || permaddress==""||phone == "" || email==""||pass == "" || Confirmpass=="" ){
+document.getElementById("p1").innerHTML ="<b>Please fill up form Properly </b>";
+
+
+document.getElementById("p1").style.color="red";
+
+}
+
+
+
+   else {
+
+ 
+
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if(this.readyState == 4 && this.status == 200) {
+                        document.getElementById("p1").innerHTML = xhttp.responseText;
+                        document.getElementById("p1").style.color = "green";
+                    }
+                }
+
+ 
+
+                xhttp.open("POST", "Fajaxsignup.php", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send("user="+user+"&myname="+myname+"&dateOfBirth="+dateOfBirth+"&fathername="+fathername+"&mothername="+mothername+"&paddress="+paddress+"&permaddress="+permaddress+"&phone="+phone+"&email="+email+"&pass="+pass+"&Confirmpass="+Confirmpass);
+            }
+    }
+       
+ 
+
+
+</script>
+
+
+
+
+</body>
+</html>

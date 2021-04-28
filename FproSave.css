@@ -1,0 +1,199 @@
+@import url('https://fonts.googlepis.com/css?family=Roboto:700&display=swap ');
+
+
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none; 
+box-sizing: border-box;
+}
+
+
+.wrapper{
+
+	background: url(h1.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+
+
+.navbar{
+color: white;
+	height: 80px;
+	width: 100%;
+	background : rgba(0,0,0,0.4);
+}
+
+
+
+.navbar ul {
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px; 
+}
+
+.navbar ul li a{
+
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	padding: 6px 13px;
+	font-family: 'Roboto',sans-serif;
+	transition: .4s;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover{
+
+	background: #C0C0C0;
+	border-radius: 2px;
+}
+
+.navbar.fa
+{
+	margin-right: 8px;
+}
+.sub-menu-1{
+	display: none;
+}
+.navbar ul li:hover .sub-menu-1
+{
+	display:block;
+	position:absolute;
+	background: black;
+	margin-top: 15px;
+margin-left: -15px;
+}
+.navbar ul li:hover .sub-menu-1 ul {
+display: block;
+margin: 10px; 
+}
+
+.navbar ul li:hover .sub-menu-1 ul li {
+width: 240px;
+padding: 2px;
+border-bottom: 1px dotted #fff;
+background: transparent;
+border-radius: 0;
+text-align: left; 
+
+}
+
+.navbar ul li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}
+.navbar ul li:hover .sub-menu-1 ul li a:hover{
+	color: #191970;
+
+}
+
+
+.center .buttons{
+	margin: 35px 280px;
+}
+.buttons{
+
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	text-align:center;
+}
+.buttons button{
+	height:60px;
+	width:180px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #000080;
+	text-align: bottom;
+	background:#ccffcc;
+	border:1px solid #cc0000;
+	outline: none;
+	cursor: pointer;
+	border-radius: 25px;
+	transition: .5s; 
+}
+.buttons .btn{
+margin-left: 35px;
+
+}
+.buttons button:hover{
+background:#008080;
+
+}
+
+
+footer{
+    background: #DCDCDC;
+    height:auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff; 
+
+}
+
+.footer-content{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.socials{
+
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin:1rem 0 3rem 0;
+}
+.socials li{
+margin: 0 20px;
+
+}
+.socials a {
+	text-decoration: none;
+	color:#008B8B;
+}
+.socials a i {
+	font-size: 1.1rem;
+	transition: color .4s ease;
+}
+.socials a:hover i{
+	color:#8B0000;
+}
+.footer-bottom{
+	background:#A9A9A9;
+	width:100vw;
+	padding: 20px 0;
+	text-align: center;
+
+}
+
+.footer-bottom p{
+	font-size: 14px;
+	word-spacing: 2px;
+	text-transform: capitalize;
+
+}
+.footer-bottom span{
+	text-transform: uppercase;
+	margin: 0 10px;
+	font-weight: bold;
+	color: #191970;
+	opacity: .4;
+	font-weight: 200;
+}
+

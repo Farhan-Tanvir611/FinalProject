@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+
+
+
+<style type ="text/css">
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+.filter {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+z-index: 1;
+opacity: .7;
+background: rgb(34,194,195);
+background: linear-gradient(0deg, rgba(34,194,195,0.8746849081429446) 44%, rgba(253,229,45,1) 100%);
+
+
+
+}
+
+table{
+
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 500px;
+	height:300px;
+	
+border-collapse: collapse;
+border-spacing: 0;
+border-radius: 12px 12px 0 0;
+overflow: hidden;
+box-shadow: 0 2px 12px rgba(32,32,32,.3);
+background: #fafafa;
+text-align: center;
+
+
+}
+
+th,td{
+	
+	padding: 12px,15px;
+
+
+}
+
+th{
+	background:#3580b5;
+	color:#ba475e;
+text-transform: uppercase;
+font-family: 'Roboto',sans-serif;
+
+
+
+}
+
+td{
+	font-family: 'Open Sans',sans-serif;
+}
+tr:nth-child(odd){
+	background-color: #d3cb64;
+}
+
+</style>
+
+<center>
+
+
+ <h1>USER INFORMATION</h1>
+
+ <label for="searchKey">ID:</label>
+ <br>
+ <br>
+<input type="text" name="searchKey" id="searchKey">
+
+ <button id="search" onclick="search()">Search</button>
+
+ <p id="p2"></p>
+
+
+<script>
+
+ function search() {
+var searchKey = document.getElementById("searchKey").value;
+
+ var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if(this.readyState == 4 && this.status == 200) {
+document.getElementById("p2").innerHTML = xhttp.responseText;
+}
+}
+
+ xhttp.open("GET", "FUserInfo.php?searchKey=" + searchKey, true);
+xhttp.send();
+}
+
+ </script>
+
+</center>
+
+</body>
+</html>
